@@ -32,7 +32,12 @@ class DotCppSpider(Spider):
                 self.tasks.append(pid)
 
     def run(self):
+        ok_pid = self.get_okpid()
+        print(ok_pid)
+        print(type(ok_pid[0]))
         for pid in self.tasks:
+            if str(pid) in ok_pid:
+                continue
             try:
                 self.AC(pid, "C++")
             except:
@@ -263,6 +268,12 @@ class DotCppSpider(Spider):
 
     def wait(self, a=1, b=3):
         time.sleep(random.randint(a, b))
+
+    def get_okpid(self):
+        mgc = pymongo.MongoClient("mongodb://localhost:27017/")
+        dotdb = mgc["dotcpp"]
+        ll = dotdb.list_collection_names()
+        return [i for i in ll]
 
 
 if __name__ == "__main__":
