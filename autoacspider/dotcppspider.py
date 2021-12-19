@@ -37,9 +37,10 @@ class DotCppSpider(Spider):
                 self.AC(pid, "C++")
             except:
                 _time = datetime.datetime.now().strftime("%m-%d_%H:%M")
-                msg = "发生错误@" + _time
-                send_message(msg=msg, subject=msg, receiver="3282174135@qq.com")
-                time.sleep(60 * 5)
+                subject = "发生错误@" + _time
+                msg = subject
+                send_message(msg=msg, subject=subject, receiver="3282174135@qq.com")
+                time.sleep(30)
                 continue
 
     def AC(self, pid, _type="C++"):
