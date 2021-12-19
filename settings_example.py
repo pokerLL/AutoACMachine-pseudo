@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(__file__)
 LOG_DIR = BASE_DIR + sep + 'log'
 
 # 日志文件路径
-wrong_url_log = LOG_DIR + sep + "wrong_url.txt"
+WRONG_URL_LOG = LOG_DIR + sep + "wrong_url.txt"
 
 # 爬虫模块参数
 NEED_RANDOM_PROXY = False

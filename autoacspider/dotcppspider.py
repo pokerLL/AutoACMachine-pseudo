@@ -64,7 +64,7 @@ class DotCppSpider(Spider):
                     self.get_code(ans)
                 except:
                     self.get_code(ans)
-                if settings.INGORE_CODE_TYPE or ans._type == _type:
+                if settings.IGNORE_CODE_TYPE or ans._type == _type:
                     self.push_code(ans)
                     if self.get_answer_status():
                         # print(ans)
@@ -82,7 +82,7 @@ class DotCppSpider(Spider):
         ans_list = []
         db = self.mongoclient[self.db_name]
         col = db[str(pid)]
-        if settings.INGORE_CODE_TYPE:
+        if settings.IGNORE_CODE_TYPE:
             rows = col.find()
         else:
             rows = col.find({"type": _type})
