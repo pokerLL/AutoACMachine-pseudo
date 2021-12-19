@@ -1,4 +1,4 @@
-from settings import LOG_DIR
+from settings import WRONG_URL_LOG
 import pymongo
 
 mongoclient = pymongo.MongoClient("mongodb://localhost:27017/")
@@ -49,7 +49,7 @@ class CodeAnswer:
         return ans_list
 
     def save_wrong(self):
-        with open(LOG_DIR + "/wurl", "a+") as f:
+        with open(WRONG_URL_LOG, "a+") as f:
             f.write(str(self.pid) + "\t" + self.url + "\n")
 
     def delete(self):
