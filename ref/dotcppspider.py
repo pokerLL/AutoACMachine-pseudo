@@ -11,7 +11,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
 
-import iptool
+from iptool import iptool
 
 CodeAnswer = namedtuple("CodeAnswer", "pid type url code")
 

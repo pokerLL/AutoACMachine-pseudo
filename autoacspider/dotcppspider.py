@@ -8,8 +8,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
 
-from answer import CodeAnswer
-from email_tool import send_message
+from answer.answer import CodeAnswer
+from utils import send_message
 from spider import *
 
 
