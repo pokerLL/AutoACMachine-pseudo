@@ -6,7 +6,6 @@ from email.header import Header
 
 from settings import *
 
-
 def send_message(msg, subject, receiver):
     sender = EMAIL_HOST_USER
     message = MIMEText(msg, 'html', 'utf-8')

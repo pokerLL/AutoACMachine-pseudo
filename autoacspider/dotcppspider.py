@@ -10,7 +10,7 @@ from selenium.webdriver.support.select import Select
 
 from answer.answer import CodeAnswer
 from utils import send_message
-from spider import *
+from autoacspider.spider import *
 
 
 class DotCppSpider(Spider):

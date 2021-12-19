@@ -54,7 +54,7 @@ if __name__ == "__main__":
     # else:
     #     l, r = mode_2()
     #     spider = DotCppSpider(l=int(l), r=int(r))
-    spider = DotCppSpider(l=1770, r=2000)
+    spider = DotCppSpider(l=1990, r=2000)
     print(spider.tasks)
     try:
         spider.run()
